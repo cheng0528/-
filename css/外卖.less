@@ -1,0 +1,237 @@
+@import url(m_style.css); //封装宽高及背景
+.full(@w, @h, @bg) {
+    width: @w;
+    height: @h;
+    background: @bg;
+}
+
+.box(@dq: horizontal) {
+    display: -webkit-box; //设置父元素为弹性盒布局
+    -webkit-box-orient: @dq; //将子元素的排列方式设置
+}
+
+html,
+body,
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container{
+    .box(vertical);
+    header{
+        .full(100%,0.96rem,#3a3a3a);
+        .box;
+        span{
+            display: block;
+            margin-left: 0.3rem;
+            margin-right: 0.3rem;
+            margin-top: 0.3rem;
+            //.box;
+            font-size: 14px;
+            color: white;
+            background: url(../img/jiao.jpg) no-repeat right 0.26rem;
+            background-size: 0.19rem;
+            padding-right: 0.14rem;
+            
+           
+        }
+        input{
+            display: block;
+            margin-top: 0.22rem;
+            -webkit-box-flex: 1;
+            margin-bottom: 0.14rem;
+            border-radius: 0.09rem;
+        }
+        b{
+            img{
+                .full(0.5rem,0.47rem,none);
+                margin-right: 0.25rem;
+                margin-top: 0.26rem;
+                margin-left: 0.25rem;
+            }
+        }
+        
+    }
+    section{
+       
+        -webkit-box-flex: 1;
+       
+        .full(100%,auto,#f5f5f9);
+        .one{
+            
+            .swiper-container{
+                .swiper-wrapper{
+                    .swiper-slide{
+                      .box;
+                      dl{
+                          -webkit-box-flex: 1;
+                          margin-top: 0.44rem;
+                          text-align: center;
+                          dt{
+//                            margin-left: 0.6rem;
+                              img{
+               
+                                    .full(0.58rem,auto,none);
+                
+                                  } 
+                          }
+                          dd{
+                              
+                              margin-top: 0.28rem;
+                          }
+                      }  
+                     
+                    }
+                }
+            }
+            
+            .full(100%,2.3rem,white);
+            
+             
+            
+        }//one
+        .two{
+            margin-top: 2px;
+            border-top: 1px,solid,#dddddd;
+            margin-bottom: 2px;
+            border-bottom: 1px,solid,#dddddd;
+            
+            .box;
+            .full(100%,1.02rem,#ffffff);
+            h1{
+                font-family: "微软雅黑";
+                font-size: 0.4rem;
+                line-height: 1.02rem;
+                margin-left: 0.27rem;
+                margin-right: 0.25rem;
+                color: #ff5656;
+            }
+            p{
+                img{
+                     .full(0.06rem,0.59rem,none);
+                     margin-top: 0.21rem;
+                }
+               
+            }
+            h2{
+                -webkit-box-flex: 1;
+                font-size: 0.3rem;
+                line-height: 1.02rem;
+                margin-left: 0.33rem;
+            }
+            span{
+                width: 0.7rem;
+                height: 0.42rem;
+                margin-right: 0.66rem;
+                text-align: center;
+                display: block;
+                margin-top: 0.3rem;
+                background: #fb6165;
+                border-radius: 0.4rem;
+                
+            }
+            b{
+                img{
+                    .full(0.2rem,0.4rem,none);
+                    margin-right: 0.3rem;
+                    margin-top: 0.3rem;
+                }
+                
+            }
+            
+        }
+        .three{
+            .full(100%,3.35rem,#ffffff);
+            //.box(vertical);
+            margin-top: 20px;
+           
+            
+           h1{
+              
+               
+               padding-top: 12px;
+                a{
+                display: block;
+                height: 0.45rem;
+                width: 100%;
+                font-size: 0.3rem;
+                border-left: 5px solid #fb6165;
+                padding-left: 0.15rem;
+                margin-left: 0.3rem;
+                }
+            }
+          .main{
+              .box;
+              -webkit-box-align: center;
+               .full(100%,2.68rem,none);
+               text-align: center;
+              dl{
+              
+              -webkit-box-flex: 1;
+              dt{
+                  
+                  img{
+                      
+                      .full(3.2rem,auto,none);
+                  }
+              }
+          }
+          }
+        }
+        .four{
+            .full(100%,2.94rem,none);
+                       h1{
+              
+               
+               //padding-top: 12px;
+                a{
+                display: block;
+                height: 0.45rem;
+                width: 100%;
+                font-size: 0.3rem;
+                border-left: 5px solid #fb6165;
+                padding-left: 0.15rem;
+                margin-left: 0.3rem;
+                }
+            }
+          .main{
+            //.box;
+            .full(100%,2.68rem,none);
+             
+              .box;
+              -webkit-box-align: center;
+               .full(100%,2.68rem,none);
+               text-align: center;
+              dl{
+              
+              -webkit-box-flex: 1;
+              dt{
+                  
+                  img{
+                      
+                      .full(1.95rem,1.5rem,none);
+                  }
+              }
+          }
+          }
+            
+        }
+    }
+    footer{
+        .full(100%,1.06rem,#fafbfe);
+        .box;
+        dl{
+            -webkit-box-flex: 1;
+            text-align: center;
+            dt{
+                img{
+                    .full(0.44rem,0.38rem,none);
+                    margin-top: 0.17rem;
+                }
+            }
+        }
+    }
+    
+}
